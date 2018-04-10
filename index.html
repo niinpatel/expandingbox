@@ -18,12 +18,11 @@
 </head>
 <body>
 
-    <p>Click "Expand" to expand the box every 1 second. Click "Stop" to stop expanding. Click "reset" to restore to origin size.</p>
+    <p>Click "Expand" to expand the box every 1 second. Click "Stop" to stop expanding. Click "Reset" to restore to origin size.</p>
     <button onclick="expand()">Expand</button>
     <button onclick="stop()">Stop</button>
     <button onclick="reset()">Reset</button>
     <br/><br/>
-
 
     <div id="expandingbox"></div>
     <script type="text/javascript">
@@ -31,7 +30,6 @@
         var boxHeight = 40;
         var expandingBox = document.getElementById("expandingbox");
         var expandBox;
-
 
         function expandStart(){
             boxWidth += 10;
@@ -56,7 +54,6 @@
         }
 
     </script>
-
 
 </body>
 </html>
