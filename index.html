@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expanding Box</title>
+    <style>
+
+        #expandingbox {
+            height: 40px;
+            width: 40px;
+            border: solid 2px green;
+            padding: 5px;
+            background-color:red;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <p>The box expands every 1 second. Click "Stop" to stop expanding.</p>
+    <button onclick="stop()">Stop</button><br/><br/>
+
+
+    <div id="expandingbox"></div>
+    <script type="text/javascript">
+        var boxWidth = 40;
+        var boxHeight = 40;
+        var expandingBox = document.getElementById("expandingbox");
+
+        var expandBox = setInterval(expand, 1000);
+
+        function expand(){
+            boxWidth += 10;
+            boxHeight += 10;
+            expandingBox.style.width = boxWidth + "px";
+            expandingBox.style.height = boxHeight + "px";
+        }
+        
+        function stop() {
+            clearInterval(expandBox);
+        }
+
+    </script>
+
+
+</body>
+</html>
